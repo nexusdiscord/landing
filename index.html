@@ -21,7 +21,7 @@
         <div class="zoo-profile">
           <div class="container">
             <div class="row">
-              <div class="col-sm-6 col-print-6 align-self-center mb-3 mb-lg-0">
+              <div class="col-md-6 align-self-center mb-3 mb-lg-0">
                 <div class="zoo-profile-main">
                   <div class="zoo-profile-main-pic">
                     <img src="images/nexusAVA128.png" alt="" class="rounded-circle" />
@@ -30,7 +30,7 @@
                   <div class="zoo-profile_user-detail">
                     <h5 class="zoo-user-name">NEXUS 🇮🇩</h5>
                     <p class="cd-headline">
-                        <b>Indonesia Gamers</b>
+                      <b>Indonesia Gamers</b>
                     </p>
                   </div>
                   <!--end zoo-profile_user-detail-->
@@ -38,10 +38,13 @@
                 <!--end profile-main-pic-->
               </div>
               <!--end col-->
-              <div class="col-sm-4 col-print-4 ml-auto">
+              <div class="col-md-4 ml-auto">
                 <ul class="list-unstyled personal-detail">
                   <li><i class="uil uil-link-alt mr-2"></i> <b>Invite Code</b> :</li>
-				  <li><span style="font-size:18px; background-color:#0d0f1f; padding: 3px 6px; border-bottom:1px dotted #f1646c;">https://discord.gg/ZdJ7Ned</span> <span style="cursor:pointer;" class="invite" data-clipboard-text="https://discord.gg/ZdJ7Ned"><i class="uil uil-copy"></i></span></li>
+                  <li>
+                    <span style="font-size: 18px; background-color: #0d0f1f; padding: 3px 6px; border-bottom: 1px dotted #f1646c;">https://discord.gg/ZdJ7Ned</span>
+                    <span style="cursor: pointer;" class="invite" data-clipboard-text="https://discord.gg/ZdJ7Ned"><i class="uil uil-copy"></i></span>
+                  </li>
                 </ul>
                 <!--end personal-detail-->
                 <ul class="list-inline social-icon mb-0">
@@ -72,7 +75,7 @@
         <div class="container">
           <div class="row">
             <!--end col-->
-            <div class="col-sm-6 col-print-6">
+            <div class="col-lg-6 col-md-12 col-sm-12">
               <h4 class="text-primary font-weight-bold">We are NEXUS!</h4>
 
               <p>
@@ -83,7 +86,7 @@
               <a href="https://discord.gg/ZdJ7Ned" type="button" class="btn btn-lg btn-danger">Join Sekarang!</a>
             </div>
             <!--end col-->
-            <div class="col-sm-5 col-print-5 offset-lg-1 align-self-center d-none d-md-block">
+            <div class="col-lg-5 offset-lg-1 align-self-center d-none d-lg-block">
               <img class="img-fluid" src="images/nexusHDimg.png" alt="" />
             </div>
             <!--end col-->
@@ -173,38 +176,36 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
     <script>
-	// Tooltip
+      // Tooltip
 
-	$('.invite').tooltip({
-	  trigger: 'click',
-	  placement: 'bottom'
-	});
+      $('.invite').tooltip({
+        trigger: 'click',
+        placement: 'bottom'
+      });
 
-	function setTooltip(message) {
-	  $('.invite').tooltip('hide')
-		.attr('data-original-title', message)
-		.tooltip('show');
-	}
+      function setTooltip(message) {
+        $('.invite').tooltip('hide').attr('data-original-title', message).tooltip('show');
+      }
 
-	function hideTooltip() {
-	  setTimeout(function() {
-		$('.invite').tooltip('hide');
-	  }, 1000);
-	}
+      function hideTooltip() {
+        setTimeout(function () {
+          $('.invite').tooltip('hide');
+        }, 1000);
+      }
 
-	// Clipboard
+      // Clipboard
 
-	var clipboard = new ClipboardJS('.invite');
+      var clipboard = new ClipboardJS('.invite');
 
-	clipboard.on('success', function(e) {
-	  setTooltip('Copied!');
-	  hideTooltip();
-	});
+      clipboard.on('success', function (e) {
+        setTooltip('Copied!');
+        hideTooltip();
+      });
 
-	clipboard.on('error', function(e) {
-	  setTooltip('Failed!');
-	  hideTooltip();
-	});
+      clipboard.on('error', function (e) {
+        setTooltip('Failed!');
+        hideTooltip();
+      });
     </script>
   </body>
 </html>
